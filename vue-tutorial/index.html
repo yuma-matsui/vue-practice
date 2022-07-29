@@ -22,8 +22,40 @@
     <p>{{ message }}</p>
     <button v-on:click="reverseMessage">Reverse Message</button>
   </div>
+
+  <div id="two-way-binding">
+    <p>{{ message }}</p>
+    <input type="text" v-model="message">
+  </div>
+
+  <div id="conditional-rendering">
+    <span v-if="seen">Now you see mee</span>
+    <button v-on:click="clickOn">Change seen</button>
+  </div>
+
+  <div id="list-rendering">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+  </div>
+
+  <div id="todo-item">
+    <ol>
+      <todo-item
+        v-for="item in groceryList"
+        v-bind:todo="item"
+        v-bind:key="item.id"
+      ></todo-item>
+    </ol>
+  </div>
   <script src="bind_attribute.js"></script>
   <script src="counter.js"></script>
   <script src="event_handling.js"></script>
+  <script src="two_way_binding.js"></script>
+  <script src="conditional_rendering.js"></script>
+  <script src="list_rendering.js"></script>
+  <script src="todo_item.js"></script>
 </body>
 </html>
