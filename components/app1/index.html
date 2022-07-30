@@ -32,9 +32,9 @@
       <h2>Even Items</h2>
       <ul>
         <li
-          v-for="item in evenItems"
-          :key="item.id"
-        >{{ item.text }}</li>
+          v-for="{ id, text } in evenItems"
+          :key="id"
+        >{{ text }}</li>
       </ul>
     </template>
     <h1 v-else>You have no items.</h1>

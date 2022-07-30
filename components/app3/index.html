@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="todo-list">
+    <form @submit.prevent="addNewTodo">
+      <label for="new-todo">Add a todo</label>
+      <input
+        type="text"
+        v-model="newTodoText"
+        id="new-todo"
+        placeholder="E.g. Feed the cat."
+      />
+    </form>
+    <ul>
+      <todo-item
+        v-for="(todo, index) in todos"
+        :key="todo.id"
+        :title="todo.title"
+        @remove="todos.splice(index, 1)"
+      >
+      </todo-item>
+    </ul>
+  </div>
+  <script src="application.js"></script>
+</body>
+</html>
+
