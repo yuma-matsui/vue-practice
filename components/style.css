@@ -1,0 +1,8 @@
+.active {
+  color: red;
+  font-weight: bold;
+}
+
+.done {
+  text-decoration: line-through;
+}
