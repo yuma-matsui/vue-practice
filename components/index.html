@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+  <div id="app">
+    <button :disabled="isButtonDisabled">Button</button>
+    <button @click="toggleButton">change disabled type</button>
+    <button @click="countUp">Count Up</button>
+
+    <span :title="toTitleDate('2022/7/30')">
+      {{ formatDate('2022/7/29') }}
+    </span>
+
+    <ol>
+      <h1>All Items</h1>
+      <li
+        v-for="item in items"
+        :key="item.id"
+      >{{ item.text }}</li>
+    </ol>
+    <button @click="addItem">Add item</button>
+    <hr>
+    <h2>Odd Items</h2>
+    <ul>
+      <li
+        v-for="item in oddItems"
+        :key="item.id"
+      >{{ item.text }}</li>
+    </ul>
+
+    <hr>
+    <h2>Even Items</h2>
+    <ul>
+      <li
+        v-for="item in evenItems"
+        :key="item.id"
+      >{{ item.text }}</li>
+    </ul>
+  </div>
+  <script src="application.js"></script>
+</body>
+</html>
