@@ -1,6 +1,8 @@
 {
   "name": "vue-practice",
   "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,11 +14,5 @@
   "bugs": {
     "url": "https://github.com/yuma-matsui/vue-practice/issues"
   },
-  "homepage": "https://github.com/yuma-matsui/vue-practice#readme",
-  "dependencies": {
-    "eslint": "^8.20.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "vue": "^3.2.36"
-  }
+  "homepage": "https://github.com/yuma-matsui/vue-practice#readme"
 }

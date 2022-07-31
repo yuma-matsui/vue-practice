@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>app6</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app">
+    <h2>{{ counter }}</h2>
+    <counter-component :counter="counter" @increment="increment"></counter-component>
+  </div>
+  
+  <script type="module" src="./main.js"></script>
+
+  <script type="text/x-template" id="counter-component">
+    <p>{{ halfCounter }}</p>
+    <p>{{ doubleCounter }}</p>
+    <count-up-button
+      :counter="counter"
+      @increment="countUp"
+    />
+  </script>
+
+  <script type="text/x-template" id="count-up-button">
+    <button @click="increment">+</button>
+  </script>
+</body>
+</html>
